@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home - My Flask App
+{% endblock %}
+
+{% block content %}
+<main class="container" role="main">
+    <header>
+        <h1>Bem-vindo ao Meu Projeto de Estudos</h1>
+        <p>Este é um projeto de aprendizado em desenvolvimento web com <strong>Flask</strong>, <strong>MongoDB</strong>, <strong>Docker</strong> e <strong>REST API</strong>.</p>
+    </header>
+
+    <section>
+        <h2>Sobre o Projeto</h2>
+        <p>
+            Esta aplicação é parte dos meus estudos para explorar a criação de aplicações web modernas. Utilizo o framework Flask para construir uma API REST, MongoDB como banco de dados NoSQL, e Docker para orquestração de contêineres, garantindo um ambiente de desenvolvimento consistente.
+        </p>
+        <p>
+            A API fornece endpoints para acessar dados como metadados de proteínas, sequências, descrições funcionais e dados taxonômicos. Confira a <a href="{{ url_for('api') }}">documentação da API</a> para mais detalhes.
+        </p>
+    </section>
+
+    <section>
+        <h2>Tecnologias Utilizadas</h2>
+        <ul class="tech-list">
+            <li><strong>Flask</strong>: Framework Python para desenvolvimento web e APIs REST.</li>
+            <li><strong>MongoDB</strong>: Banco de dados NoSQL para armazenamento de dados dinâmicos.</li>
+            <li><strong>Docker</strong>: Contêineres para facilitar o desenvolvimento e implantação.</li>
+            <li><strong>REST API</strong>: Endpoints para interação com dados via HTTP.</li>
+        </ul>
+    </section>
+</main>
+{% endblock %}

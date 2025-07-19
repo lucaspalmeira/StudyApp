@@ -1,0 +1,11 @@
+StudyApp/
+├── app.py
+├── config.py
+├── requirements.txt
+├── static
+│   └── styles.css
+├── structure.txt
+└── templates
+    └── index.html
+
+3 directories, 6 files

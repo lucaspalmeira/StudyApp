@@ -1,0 +1,37 @@
+/* Estilos para o rodapé */
+footer {
+    background-color: #1a3c6d;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px 0;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+}

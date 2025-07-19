@@ -1,0 +1,55 @@
+/* Styling the site-header */
+site-header {
+    background-color: #1a3c6d;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the nav and ul */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the nav items */
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+/* Styling the nav links */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+nav ul li a:hover {
+    color: #a3bffa;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}

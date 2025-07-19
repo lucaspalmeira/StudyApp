@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}API Documentation - FunInDB{% endblock %}
+{% block content %}
+<main class="container" role="main">
+    <section id="endpoints">
+        <h2>Endpoints disponíveis</h2>
+        <article class="endpoint">
+            <h3><code>GET /api/items/metadata</code></h3>
+            <p>Retorna todos os metadados (proteínas).</p>
+            <pre><code class="language-bash">curl http://localhost:5000/api/items/metadata</code></pre>
+        </article>
+
+        <article class="endpoint">
+            <h3><code>GET /api/items/metadata/&lt;ec_number&gt;</code></h3>
+            <p>Filtra metadados por número EC.</p>
+            <pre><code>curl http://localhost:5000/api/items/metadata/3.2.1.7</code></pre>
+        </article>
+
+        <!-- Sequences -->
+        <article class="endpoint">
+            <h3><code>GET /api/items/sequences</code></h3>
+            <p>Retorna todas as sequências.</p>
+            <pre><code>curl http://localhost:5000/api/items/sequences</code></pre>
+        </article>
+
+        <article class="endpoint">
+            <h3><code>GET /api/items/sequences/&lt;ec_number&gt;</code></h3>
+            <p>Retorna sequências filtradas por EC.</p>
+            <pre><code>curl http://localhost:5000/api/items/sequences/3.2.1.7</code></pre>
+        </article>
+
+        <!-- Descriptors -->
+        <article class="endpoint">
+            <h3><code>GET /api/items/descriptors</code></h3>
+            <p>Retorna todas as descrições funcionais.</p>
+            <pre><code>curl http://localhost:5000/api/items/descriptors</code></pre>
+        </article>
+
+        <article class="endpoint">
+            <h3><code>GET /api/items/descriptors/&lt;ec_number&gt;</code></h3>
+            <p>Retorna descrições por EC.</p>
+            <pre><code>curl http://localhost:5000/api/items/descriptors/3.2.1.7</code></pre>
+        </article>
+
+        <!-- Taxon -->
+        <article class="endpoint">
+            <h3><code>GET /api/items/taxon</code></h3>
+            <p>Retorna todos os dados taxonômicos.</p>
+            <pre><code>curl http://localhost:5000/api/items/taxon</code></pre>
+        </article>
+
+        <article class="endpoint">
+            <h3><code>GET /api/items/taxon/&lt;ec_number&gt;</code></h3>
+            <p>Retorna dados taxonômicos por EC.</p>
+            <pre><code>curl http://localhost:5000/api/items/taxon/3.2.1.7</code></pre>
+        </article>
+
+    </section>
+
+    <section id="how-to">
+        <h2>Como fazer requisições</h2>
+        <article>
+            <h3>Via terminal (curl)</h3>
+            <pre><code class="language-bash">curl http://localhost:5000/api/items/metadata</code></pre>
+        </article>
+        <article>
+            <h3>Via Python (usando requests)</h3>
+            <pre><code class="language-python">
+import requests
+response = requests.get("http://localhost:5000/api/items/metadata")
+print(response.json())
+            </code></pre>
+        </article>
+    </section>
+</main>
+{% endblock %}
+
+    
